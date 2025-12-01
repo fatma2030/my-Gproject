@@ -53,81 +53,63 @@
   <div class="container py-5 text-center">
     <h3 class="title-txt text-center text-success mb-4">المتجر الزراعي</h3>
     <h5 class="title-txt text-center text-success mb-5">تسوق أفضل الأسمدة والمبيدات والبذور والأدوات الزراعية</h5>
-
     <!-- فلاتر المتجر -->
     <div class="shopFilterGroup d-flex flex-wrap justify-content-center gap-3 mb-5">
-
       <button class="shopFilterBtn btn btn-light text-success px-4 py-3 text-center fs-5 active" data-filter="all">
         <i class="far fa-calendar ms-2"></i>
         الكل
       </button>
-
       <button class="shopFilterBtn btn btn-light text-success px-4 py-3 text-center fs-5" data-filter="fert">
         <i class="fas fa-seedling ms-2"></i>
         أسمدة
       </button>
-
       <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="pest">
         <i class="fas fa-bug ms-2"></i>
         مبيدات
       </button>
-
       <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="tools">
         <i class="fas fa-tools ms-2"></i>
         أدوات
       </button>
-
       <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="seeds">
         <i class="fas fa-seedling"></i> بذور
       </button>
-
       <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="water">
         <i class="fas fa-tint ms-2"></i>
         أنظمة ري
       </button>
-
     </div>
-
     <!-- كروت المنتجات -->
     <div id="shopCardsContainer" class="row g-4"></div>
-
     <!-- ============ SHOP PAYMENT MODAL ============ -->
     <div class="modal fade" id="shopPaymentModal">
       <div class="modal-dialog modal-dialog-centered" style="max-width:500px;">
         <div class="modal-content" style="border-radius:20px; overflow:hidden;">
-
           <div class="modal-header">
             <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
             <h4 class="modal-title text-success">اختر طريقة الدفع</h4>
           </div>
-
           <div class="modal-body text-end">
-
             <div id="shopPayBox" class="p-3 mb-3 rounded text-success fw-bold" style="background:#e3f8e3;">
               <span id="shopPayName">اسم المنتج</span><br>
               <span id="shopPayPrice">150 جنيه</span>
             </div>
-
-            <h6 class="text-success mb-3">اختر وسيلة الدفع</h6>
-
+           <h6 class="text-success mb-3">اختر وسيلة الدفع</h6>
             <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
               data-method="فودافون كاش">
               <span class="text-success">الدفع عبر المحافظ الإلكترونية</span>
               <i class="fas fa-wallet text-danger fs-4"></i>
             </div>
-
             <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
               data-method="تحويل بنكي">
               <span class="text-success">الدفع بواسطة التحويل</span>
               <i class="fas fa-university text-primary fs-4"></i>
             </div>
-
             <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
               data-method="InstaPay">
               <span class="text-success">الدفع عبر إنستا باي</span>
               <i class="fas fa-bolt text-purple fs-4"></i>
             </div>
-
             <button id="shopConfirmPay" class="btn btn-success w-100 py-2 fs-5 mt-3">
               إتمام الدفع
             </button>
@@ -137,7 +119,6 @@
     </div> <!-- modal fade -->
   </div> <!-- contianer -->
   <!-- ///////////////////////// -->
-
   <!-- footer -->
   <footer class="footer">
     <div class="container">

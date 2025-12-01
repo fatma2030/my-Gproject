@@ -50,7 +50,7 @@
 
   <!-- المحتوى الأساسي للصفحة -->
 
-  <div class="container py-5 text-center">
+  <section class="container py-5 text-center">
     <h3 class="title-txt text-center text-success mb-4">النباتات والفصول الزراعية </h3>
     <h5 class="title-txt text-center text-success mb-5">اكتشف افضل النباتات لكل فصل مع تفاصيل الزراعة والتكلفة</h5>
     <!-- /////////Seasons ////////////-->
@@ -147,70 +147,52 @@
     <div id="cardsContainer" class="row g-4"></div>
 
     <!-- //////////////////modal/////////////// -->
-
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> -->
-
     <!-- Modal -->
     <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-dialog-centered" style="max-width: 550px;">
         <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
-
           <!-- header -->
           <div class="modal-header justify-content-between align-items-center">
             <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
-
             <h4 class="modal-title text-success d-flex align-items-center gap-2">
               <i class="fab fa-pagelines"></i>
               <span id="modalTitle">طماطم</span>
             </h4>
           </div>
-
           <!-- image -->
           <img id="modalImg" src="images/tomato2.jpg" class="modalImg d-flex align-self-center"
             style="height: 260px; object-fit: cover;">
-
           <!-- body -->
           <div class="modal-body text-end">
-
             <div class="p-3 mb-3 rounded" style="background:#e3f8e3;">
               <i class="fas fa-seedling text-success"></i>
               <strong class="text-success">طريقة الزراعة</strong>
               <p id="modalMethod" class="m-0 text-success">نزرع البذور في أحواض بعمق 1-2 سم...</p>
-
             </div>
-
             <div class="p-3 mb-3 rounded" style="background:#ccf0cc;">
               <i class="fas fa-dollar-sign text-success"></i>
               <strong class="text-success">تكلفة الزراعة</strong>
               <p id="modalCost" class="m-0 text-success">15,000 - 20,000 جنيه</p>
-
             </div>
-
             <div class="p-3 mb-3 rounded" style="background:#e3f8e3;">
               <i class="far fa-clock text-success"></i>
               <strong class="text-success">مدة النمو</strong>
               <p id="modalGrowth" class="m-0 text-success">90 - 120 يوم</p>
-
             </div>
-
             <div class="text-white text-end p-2 mb-4 pe-3 " style="background-color: #1d6421; border-radius:15px;">
               <h4 class="fw-light m-0 soil-value py-2">السماد الموصلى به</h4>
               <span id="modalFertilizer" class="d-block opacity-75 pb-2">سماد NPK متوازن</span>
             </div>
-
             <div class="text-white text-end p-2 mb-4 pe-3 bg-light d-flex justify-content-between">
               <span class="opacity-75 text-success">الموسم المناسب</span>
               <span id="modalSeason" class="fw-light py-1 w-25 text-center"
                 style="background-color:#1d6421; border-radius:2rem;">مارس - مايو</span>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
-
-  </div> <!-- big-container-->
+  </section> <!-- big-container-->
   <!-- /////////////////footer/////////////// -->
   <footer class="footer">
     <div class="container">
