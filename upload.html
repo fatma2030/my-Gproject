@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صحة النبات</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar navbar-expand-sm bg-success navbar-dark text-light">
+    <div class="container-fluid">
+      <!-- الشعار -->
+      <a class="navbar-logo d-flex align-items-between me-5" href="#">
+        <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+        <span class="nameLogo mt-2">نباتي</span>
+      </a>
+
+      <!-- زر القائمة للموبايل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- روابط القائمة -->
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-leaf fs-4"></i> تسجيل الدخول </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-upload fs-4"></i> تسجيل الأمراض</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="upload.html"><i class="fas fa-tint fs-4"></i>تحليل التربة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="crops.html"><i class="fas fa-seedling fs-4"></i>النباتات والفصول</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html"><i class="fas fa-shopping-cart fs-4"></i>المتجر</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-comment fs-4"></i>استشارة خبير</a>
+          </li>
+        </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- container-fluid -->
+  </header>
+  <!-- //////////////////upload photo//////////////////////// -->
+  <div class="container py-5">
+    <h3 class="title-txt text-center mb-4">تحليل التربة وتوصية المحاصيل</h3>
+    <h5 class="title-txt text-center mb-5">ارفع صورة للتربة لتحليلها والحصول على توصيات الزراعة</h5>
+
+    <div class="row justify-content-center g-4 equal-height">
+
+      <!-- كارت الرفع -->
+      <div class="col-md-5 col-lg-5">
+        <div class="card-box text-center shadow ">
+          <h5 class="mb-3 text-end text-success pb-3" id="uploadTitle">ارفع صورة التربة</h5>
+
+          <div class="upload-area text-center text-success" id="uploadArea">
+            <i class="fa fa-upload fs-2 text-success mb-2" id="uploadIcon"></i>
+            <p id="uploadText" class="fs-5">اضغط لرفع صورة التربة أو اسحبها هنا</p>
+
+            <img id="previewImg" style="display:none; width:100%; border-radius:10px;">
+
+            <button class="btn btn-upload w-100 mt-3" id="newUploadBtn" style="display:none;">
+              رفع صورة جديدة
+            </button>
+
+            <input type="file" id="fileInput" accept="image/*" hidden>
+          </div>
+        </div>
+      </div>
+      <!-- كارت نتيجة التحليل -->
+      <div class="col-md-5 col-lg-5">
+        <div class="card-box shadow p-3" style="border-radius:15px; overflow:visible;">
+          <div id="defaultResult" class="text-center py-5 opacity-75">
+            <i class="fas fa-tint fs-1 mb-3" style="color: #bfd0bf;"></i>
+            <h5 class="text-success">ارفع صورة التربة لعرض نتيجة التحليل والتوصيات</h5>
+          </div>
+          <div id="realResult" style="display:none;">
+            <h5 class="diagHead mb-5 text-success">نتيجة التحليل</h5>
+            <div class="text-white text-end p-2 mb-4 pe-3" style="background-color: #1d6421; border-radius:15px;">
+              <span class="d-block opacity-75">نوع التربة</span>
+              <h4 class="fw-light m-0 soil-value py-1">—</h4>
+            </div>
+            <h6 class="text-success fw-bold text-end mb-3 fs-5">المحاصيل المناسبة للزراعة</h6>
+            <div class="row g-1 crops-grid mb-4 py-2 fw-bold fs-5 text-center equal-height">
+              <!-- JS هيحط المحتوى هنا -->
+            </div>
+            <h6 class="text-success fw-bold text-end mb-3 fs-5">الأسمدة الموصى بها</h6>
+            <ul class="list-group fert-list py-2 fw-bold fs-5">
+              <!-- JS هيحط المحتوى هنا -->
+            </ul>
+          </div> <!-- realResult -->
+        </div> <!-- card-box -->
+      </div> <!-- col -->
+    </div> <!-- justify-content row -->
+  </div> <!-- container -->
+  <!-- //////////////////footer///////////////// -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-end">
+          <p class="navbar-logo d-flex align-items-between me-5" href="#">
+            <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+            <span class="nameLogo mt-2">نباتي</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-white">تواصل مع الدعم</h5>
+          <ul class="list-unstyled text-white">
+            <li><i class="fas fa-phone-alt"></i> هاتف: 01234567890</li>
+            <li><i class="fas fa-envelope"></i> البريد الإلكتروني: support@planthealth.com</li>
+            <li><i class="fab fa-whatsapp"></i> واتساب: 01234567890</li>
+          </ul>
+        </div>
+        <hr class="footer-line text-center">
+        <h5 class="text-white text-center"> صحة النبات جميع الحقوق محفوظة 2025<span>&copy</span>.</h5>
+      </div>
+    </div>
+  </footer>
+  <!-- سكريبتات من المشروع المحلي -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    const fileInput = document.getElementById("fileInput");      // مدخل الصورة
+    const uploadArea = document.getElementById("uploadArea");    // مربع الرفع
+    const previewImg = document.getElementById("previewImg");    // الصورة اللي هتظهر بعد الرفع
+    const uploadText = document.getElementById("uploadText");    // النص اللي في مربع الرفع
+    const uploadIcon = document.getElementById("uploadIcon");    // الأيقونة
+    const uploadTitle = document.getElementById("uploadTitle");  // عنوان المربع
+    const newUploadBtn = document.getElementById("newUploadBtn"); // زر رفع جديد
+    const defaultResult = document.getElementById("defaultResult"); // شاشة البداية
+    const realResult = document.getElementById("realResult");       // شاشة النتيجة
+
+    // بيانات جاهزة
+    const soilData = {
+      salty: {
+        type: "تربة ملحية",
+        crops: ["الشعير", "الكينو", "البنجر", "السبانخ", "القطن", "الهليون"],
+        fertilizers: ["سماد فسفوري", "سماد بوتاسي", "جبس زراعي"]
+      },
+      clay: {
+        type: "تربة طينية",
+        crops: ["الأرز", "القمح", "البرسيم", "البصل", "الثوم", "البطاطس"],
+        fertilizers: ["سماد نيتروجيني", "كمبوست", "سوبر فوسفات"]
+      },
+      sandy: {
+        type: "تربة رملية",
+        crops: ["الجزر", "البطاطا", "الطماطم", "الفول السوداني", "البطيخ"],
+        fertilizers: ["سماد عضوي", "بوتاسيوم عالي", "هيوميك أسيد"]
+      },
+      loam: {
+        type: "تربة رملية طينية (لومية)",
+        crops: ["الخيار", "الكوسة", "الفاصوليا", "الفلفل", "الفراولة"],
+        fertilizers: ["NPK متوازن", "ماغنسيوم", "كالسيوم"]
+      }
+    };
+
+    // دالة عرض النتيجة
+    function renderResult(soilInfo) {
+      document.querySelector(".soil-value").textContent = soilInfo.type;
+
+      let cropHTML = "";
+      soilInfo.crops.forEach(crop => {
+        cropHTML += `
+      <div class="col-6">
+        <div class="crop-item">${crop}</div>
+      </div>
+    `;
+      });
+      document.querySelector(".crops-grid").innerHTML = cropHTML;
+
+      let fertHTML = "";
+      soilInfo.fertilizers.forEach(fert => {
+        fertHTML += `
+      <li class="list-group-item mb-2 fert1 text-end" style="background-color: #ccf0cc;">
+        <span class="fert-icon"><i class="far fa-check-circle"></i></span> ${fert}
+      </li>
+    `;
+      });
+      document.querySelector(".fert-list").innerHTML = fertHTML;
+    }
+
+    // شاشة التحميل
+    function showProcessingState() {
+      defaultResult.innerHTML = `
+    <div class="py-4">
+      <i class="fas fa-spinner fa-spin fs-2 text-success mb-2"></i>
+      <div>جاري تحليل الصورة...</div>
+    </div>`;
+      defaultResult.style.display = "block";
+      realResult.style.display = "none";
+    }
+
+    // إعادة ضبط النتيجة
+    function resetResultBox() {
+      defaultResult.innerHTML = `
+    <i class="fas fa-tint fs-1 mb-3" style="color:#bfd0bf;"></i>
+    <h5 class="text-success">ارفع صورة التربة لعرض نتيجة التحليل والتوصيات</h5>
+  `;
+    }
+
+    // فتح المتصفح عند الضغط على مربع الرفع
+    uploadArea.addEventListener("click", () => {
+      if (previewImg.style.display === "none") fileInput.click();
+    });
+
+    // عند اختيار صورة
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      showProcessingState();
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+
+        previewImg.src = e.target.result;
+        previewImg.style.display = "block";
+
+        uploadText.style.display = "none";
+        uploadIcon.style.display = "none";
+        uploadArea.classList.add("image-active");
+
+        uploadTitle.textContent = "الصورة المرفوعة";
+
+        newUploadBtn.style.display = "block";
+
+        setTimeout(() => {
+          defaultResult.style.display = "none";
+
+          const detectedSoil = "salty"; // النوع المؤقت الحالي
+          renderResult(soilData[detectedSoil]);
+
+          realResult.style.display = "block";
+        }, 500);
+      };
+
+      reader.readAsDataURL(file);
+    });
+
+    // زر رفع جديد
+    newUploadBtn.addEventListener("click", () => {
+
+      previewImg.style.display = "none";
+      uploadText.style.display = "block";
+      uploadIcon.style.display = "inline-block";
+      newUploadBtn.style.display = "none";
+
+      fileInput.value = "";
+      uploadTitle.textContent = "ارفع صورة التربة";
+
+      resetResultBox();
+      defaultResult.style.display = "block";
+      realResult.style.display = "none";
+
+      uploadArea.classList.remove("image-active");
+    });
+  </script>
+
+</body>
+
+</html>

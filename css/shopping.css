@@ -1,0 +1,179 @@
+     @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #ccf0cc;
+      min-height: 100vh; /* تحديد ارتفاع الصفحة بالكامل */
+      display: flex;
+      flex-direction: column;
+    }
+ 
+
+
+    /* ====== تنسيق الهيدر ====== */
+    .navbar {
+      background-color: #206d24 !important; /* الأخضر الزيتي */
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ====== شعار الموقع ====== */
+    .navbar-logo {
+      font-weight: 700;
+      color: #fff !important;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .navbar-logo:hover {
+      color: #e4f3dc !important;
+    }
+
+    /* ====== الروابط ====== */
+   /* ====== الروابط داخل النافبار ====== */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+/* ===== Hover: أبيض شفاف ===== */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.4) !important; /* أبيض بشفافية */
+  color: #fff !important;
+}
+
+/* ===== Active: أبيض صريح ===== */
+
+.navbar-nav .nav-link:active {
+  background-color: #fff !important;   /* أبيض قوي */
+  color: #206d24 !important;
+}
+
+.navbar-nav .nav-link.active i,
+.navbar-nav .nav-link:active i {
+  color: #206d24 !important;
+}
+
+/* الأيقونات أثناء الهوفر */
+.navbar-nav .nav-link:hover i {
+  color: #fff !important;
+}
+/*  ////page2*/
+
+
+
+
+
+
+
+/* فلتر المتجر */
+.shopFilterGroup .shopFilterBtn {
+    border-radius: 2rem !important;
+    transition: 0.3s ease-in-out;
+}
+
+.shopFilterGroup .shopFilterBtn:hover {
+    background-color: #c9f3c9;
+}
+
+.shopFilterGroup .shopFilterBtn.active,
+.shopFilterGroup .shopFilterBtn:focus {
+    background-color: #1d6d1d !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* كروت المتجر */
+.shopCard {
+    border-radius: 25px !important;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.shopCard:hover {
+    transform: scale(1.04);
+}
+
+.shopCard img {
+    height: 230px;
+    object-fit: cover;
+}
+
+/* عنوان المنتج */
+.shopCardTitle {
+    font-weight: bold;
+    color: #198754;
+}
+
+/* السعر */
+.shopPrice {
+    color: #1d6d1d;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* زر تفاصيل المنتج */
+.shopDetailsBtn {
+    background-color: #b2ecb2;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.shopDetailsBtn:hover {
+    background-color: #8bd88b;
+}
+
+/* ///////payModal///////// */
+#shopPaymentModal .modal-content {
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+
+#shopPayBox {
+    background: #e4f9e4;
+    border-right: 5px solid #198754;
+}
+
+/* اختيار وسائل الدفع */
+.shopPayOption {
+    border: 2px solid #dcdcdc;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.shopPayOption:hover {
+    background-color: #e1f7e1;
+}
+
+.shopPayOption.active {
+    border-color: #198754 !important;
+    background-color: #d6f5d6 !important;
+    box-shadow: 0 0 10px #b6eab6;
+}
+
+
+/* زر إتمام الدفع */
+#shopConfirmPay {
+    background-color: #198754 !important;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#shopConfirmPay:hover {
+    background-color: #146c43 !important;
+}

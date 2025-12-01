@@ -1,0 +1,123 @@
+     @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #ccf0cc;
+      min-height: 100vh; /* تحديد ارتفاع الصفحة بالكامل */
+      display: flex;
+      flex-direction: column;
+    }
+ 
+
+
+    /* ====== تنسيق الهيدر ====== */
+    .navbar {
+      background-color: #206d24 !important; /* الأخضر الزيتي */
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ====== شعار الموقع ====== */
+    .navbar-logo {
+      font-weight: 700;
+      color: #fff !important;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .navbar-logo:hover {
+      color: #e4f3dc !important;
+    }
+
+    /* ====== الروابط ====== */
+   /* ====== الروابط داخل النافبار ====== */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+/* ===== Hover: أبيض شفاف ===== */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.4) !important; /* أبيض بشفافية */
+  color: #fff !important;
+}
+
+/* ===== Active: أبيض صريح ===== */
+
+.navbar-nav .nav-link:active {
+  background-color: #fff !important;   /* أبيض قوي */
+  color: #206d24 !important;
+}
+
+.navbar-nav .nav-link.active i,
+.navbar-nav .nav-link:active i {
+  color: #206d24 !important;
+}
+
+/* الأيقونات أثناء الهوفر */
+.navbar-nav .nav-link:hover i {
+  color: #fff !important;
+}
+
+/*////////////// Footer////////////////// */
+.footer {
+  background: #2c6e2f;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* عنوان */
+.footer h5 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* قائمة التواصل */
+.footer .list-unstyled li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* الشعار */
+.footer .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+/* أيقونة */
+.footer .fa-leaf {
+  background: #fff;
+  color: #2c6e2f;
+  padding: 12px;
+  border-radius: 50%;
+  border: 2px solid #2c6e2f;
+}
+
+/* الخط */
+.footer-line {
+  height: 3px;
+  background: #03b00c;
+  border: none;
+  margin: 15px 0;
+}
+
+
+
+

@@ -1,0 +1,88 @@
+/* --- شكل الكارت --- */
+.card-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 350px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* --- منطقة رفع الصورة --- */
+.upload-area {
+    padding: 70px 25px;
+    border: 2px dashed #6bb06b;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #ffffff;
+}
+
+.upload-area:hover {
+    background: #eef9ee;
+}
+
+.upload-area.image-active {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.upload-area.image-active #uploadIcon,
+.upload-area.image-active #uploadText {
+    display: none !important;
+}
+
+/* --- الصورة بعد الرفع --- */
+#previewImg {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* --- زر رفع جديد --- */
+.btn-upload {
+    background: #1d6421;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 18px;
+    margin-bottom: 200px;
+}
+.btn-upload:hover {
+    background: #0f4913;
+    color: white;
+}
+/* ///crops/// */
+.crops-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 12px;  
+}
+
+.crops-grid .col-6 {
+    flex: 0 0 calc(50% - 6px); 
+}
+
+.crop-item {
+    background: #e4f5e4;
+    padding: 10px 0;
+    border-radius: 12px;
+    color: #155d17;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- الأسمدة --- */
+.fert-list li {
+    background: #e4f5e4 !important;
+    color: #155d17 !important;
+    border: none !important;
+    padding: 10px;
+    border-radius: 12px !important;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صحة النبات</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/crops.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- الهيدر -->
+  <header class="navbar navbar-expand-sm bg-success navbar-dark text-light">
+    <div class="container-fluid">
+      <a class="navbar-logo d-flex align-items-between me-5" href="#">
+        <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+        <span class="nameLogo mt-2">نباتي</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-leaf fs-4"></i> تسجيل الدخول </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-upload fs-4"></i> تسجيل الأمراض</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="upload.html"><i class="fas fa-tint fs-4"></i>تحليل التربة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="crops.html"><i class="fas fa-seedling fs-4"></i>النباتات والفصول</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html"><i class="fas fa-shopping-cart fs-4"></i>المتجر</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-comment fs-4"></i>استشارة خبير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الأساسي للصفحة -->
+
+  <div class="container py-5 text-center">
+    <h3 class="title-txt text-center text-success mb-4">النباتات والفصول الزراعية </h3>
+    <h5 class="title-txt text-center text-success mb-5">اكتشف افضل النباتات لكل فصل مع تفاصيل الزراعة والتكلفة</h5>
+    <!-- /////////Seasons ////////////-->
+
+    <div class="btnAll d-flex flex-wrap justify-content-center gap-3 mb-5">
+
+      <button class="btnSeason btn btn-light text-success px-4 py-3 text-center fs-5 active" data-filter="all">
+        <i class="far fa-calendar ms-2"></i>
+        كل الفصول
+      </button>
+
+      <button class="btnSeason btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="Spring">
+        <i class="fas fa-cloud ms-2"></i>
+        الربيع
+        <small class="d-block text-success">مارس - مايو</small>
+      </button>
+
+      <button class="btnSeason btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="Summer">
+        <i class="fas fa-sun ms-2"></i>
+        الصيف
+        <small class="d-block text-success">يونيو - أغسطس</small>
+      </button>
+
+      <button class="btnSeason btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="Autumn">
+        <i class="fas fa-cloud-rain ms-2"></i>
+        الخريف
+        <small class="d-block text-success">سبتمبر - نوفمبر</small>
+      </button>
+
+      <button class="btnSeason btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="Winter">
+        <i class="far fa-snowflake ms-2"></i>
+        الشتاء
+        <small class="d-block text-success">ديسمبر - فبراير</small>
+      </button>
+
+    </div><!-- btnAll -->
+
+    <!-- /////////  agri-products //////////////////////// -->
+    <!-- <div class="row g-5"> -->
+    <!-- كارت 1 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-md-5">
+        <div class="card pb-4" data-bs-toggle="modal" data-bs-target="#myModal" data-season="summer">
+          <img src="images/tomato3.jpg" class="card-img-top h-50" alt="طماطم">
+          <div class="card-body text-end text-success mt-2">
+            <h5 class="card-title">الطماطم</h5>
+            <i class="far fa-calendar ms-2 "></i>
+            <small class=" text-success fs-5 mb-2">مارس - مايو</small>
+            <a href="#" class="moreInfo d-block btn px-lg-2 mt-3 w-50">عرض التفاصيل</a> -->
+    <!-- </div> info -->
+    <!-- </div> cards -->
+    <!-- </div>col -->
+
+    <!-- كارت 2 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-md-5">
+        <div class="card pb-4 ">
+          <img src="images/cucumber.jpg" class="card-img-top h-50" alt="خيار">
+          <div class="card-body text-end text-success mt-2">
+            <h5 class="card-title">الخيار</h5>
+            <i class="far fa-calendar ms-2 "></i>
+            <small class=" text-success fs-5 mb-2">مارس - مايو</small>
+            <a href="#" class="moreInfo d-block btn px-lg-2 mt-3 w-50">عرض التفاصيل</a> -->
+    <!-- </div> info -->
+    <!-- </div> cards -->
+    <!-- </div>col -->
+
+    <!-- كارت 3 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-md-5">
+        <div class="card pb-4 ">
+          <img src="images/pepper.jpg" class="card-img-top h-50" alt="فلفل">
+          <div class="card-body text-end text-success mt-2">
+            <h5 class="card-title">الفلفل</h5>
+            <i class="far fa-calendar ms-2 "></i>
+            <small class=" text-success fs-5 mb-2">مارس - مايو</small>
+            <a href="#" class="moreInfo d-block btn px-lg-2 mt-3 w-50">عرض التفاصيل</a> -->
+    <!-- </div> info -->
+    <!-- </div> cards -->
+    <!-- </div>col -->
+
+    <!-- كارت 4 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 g-md-5">
+        <div class="card pb-4 ">
+          <img src="images/lettuce3.jpg" class="card-img-top" alt="الخس">
+          <div class="card-body text-end text-success mt-2">
+            <h5 class="card-title">الخس</h5>
+            <i class="far fa-calendar ms-2 "></i>
+            <small class=" text-success fs-5 mb-2">مارس - مايو</small>
+            <a href="#" class="moreInfo d-block btn px-lg-2 mt-3 w-50">عرض التفاصيل</a> -->
+    <!-- </div> info -->
+    <!-- </div> cards -->
+    <!-- </div>col -->
+
+    <!-- </div> row of products -->
+
+    <div id="cardsContainer" class="row g-4"></div>
+
+    <!-- //////////////////modal/////////////// -->
+
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal"> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 550px;">
+        <div class="modal-content" style="border-radius: 20px; overflow: hidden;">
+
+          <!-- header -->
+          <div class="modal-header justify-content-between align-items-center">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+
+            <h4 class="modal-title text-success d-flex align-items-center gap-2">
+              <i class="fab fa-pagelines"></i>
+              <span id="modalTitle">طماطم</span>
+            </h4>
+          </div>
+
+          <!-- image -->
+          <img id="modalImg" src="images/tomato2.jpg" class="modalImg d-flex align-self-center"
+            style="height: 260px; object-fit: cover;">
+
+          <!-- body -->
+          <div class="modal-body text-end">
+
+            <div class="p-3 mb-3 rounded" style="background:#e3f8e3;">
+              <i class="fas fa-seedling text-success"></i>
+              <strong class="text-success">طريقة الزراعة</strong>
+              <p id="modalMethod" class="m-0 text-success">نزرع البذور في أحواض بعمق 1-2 سم...</p>
+
+            </div>
+
+            <div class="p-3 mb-3 rounded" style="background:#ccf0cc;">
+              <i class="fas fa-dollar-sign text-success"></i>
+              <strong class="text-success">تكلفة الزراعة</strong>
+              <p id="modalCost" class="m-0 text-success">15,000 - 20,000 جنيه</p>
+
+            </div>
+
+            <div class="p-3 mb-3 rounded" style="background:#e3f8e3;">
+              <i class="far fa-clock text-success"></i>
+              <strong class="text-success">مدة النمو</strong>
+              <p id="modalGrowth" class="m-0 text-success">90 - 120 يوم</p>
+
+            </div>
+
+            <div class="text-white text-end p-2 mb-4 pe-3 " style="background-color: #1d6421; border-radius:15px;">
+              <h4 class="fw-light m-0 soil-value py-2">السماد الموصلى به</h4>
+              <span id="modalFertilizer" class="d-block opacity-75 pb-2">سماد NPK متوازن</span>
+            </div>
+
+            <div class="text-white text-end p-2 mb-4 pe-3 bg-light d-flex justify-content-between">
+              <span class="opacity-75 text-success">الموسم المناسب</span>
+              <span id="modalSeason" class="fw-light py-1 w-25 text-center"
+                style="background-color:#1d6421; border-radius:2rem;">مارس - مايو</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- big-container-->
+  <!-- /////////////////footer/////////////// -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-end">
+          <p class="navbar-logo d-flex align-items-between me-5" href="#">
+            <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+            <span class="nameLogo mt-2">نباتي</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-white">تواصل مع الدعم</h5>
+          <ul class="list-unstyled text-white">
+            <li><i class="fas fa-phone-alt"></i> هاتف: 01234567890</li>
+            <li><i class="fas fa-envelope"></i> البريد الإلكتروني: support@planthealth.com</li>
+            <li><i class="fab fa-whatsapp"></i> واتساب: 01234567890</li>
+          </ul>
+        </div>
+        <hr class="footer-line text-center">
+        <h5 class="text-white text-center"> صحة النبات جميع الحقوق محفوظة 2025<span>&copy</span>.</h5>
+      </div>
+    </div> <!-- container_footer -->
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    const cardsContainer = document.getElementById("cardsContainer");
+    const filterBtns = document.querySelectorAll(".btnSeason");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalImg = document.getElementById("modalImg");
+    const modalMethod = document.getElementById("modalMethod");
+    const modalCost = document.getElementById("modalCost");
+    const modalGrowth = document.getElementById("modalGrowth");
+    const modalFertilizer = document.getElementById("modalFertilizer");
+    const modalSeason = document.getElementById("modalSeason");
+    const plants = [
+      {
+        id: 1,
+        name: "الطماطم",
+        img: "images/tomato3.jpg",
+        season: "Summer",
+        seasonText: "مارس - مايو",
+        // بيانات المودال
+        modalImg: "images/tomato3.jpg",
+        method: "تزرع البذور في أحواض بعمق 1-2 سم…",
+        cost: "15,000 - 20,000 جنيه",
+        growth: "90 - 120 يوم",
+        fertilizer: "سماد NPK متوازن"
+      },
+      {
+        id: 2,
+        name: "الخيار",
+        img: "images/cucumber.jpg",
+        season: "Spring",
+        seasonText: "مارس - مايو",
+        modalImg: "images/cucumber.jpg",
+        method: "تزرع البذور مباشرة في الأرض على عمق 2-3 سم مع ري منتظم",
+        cost: "12,000 - 18,000 جنيه",
+        growth: "50-70 يوم",
+        fertilizer: "سماد عضوي + نيتروجين"
+
+      },
+      {
+        id: 3,
+        name: "الفلفل",
+        img: "images/pepper.jpg",
+        season: "Spring",
+        seasonText: "مارس - مايو",
+        modalImg: "images/pepper.jpg",
+        method: " زراعة البذور في مشتل ثم نقل الشتلات بعد 6-8 أسابيع",
+        cost: "25,000 جنيه - 18,000 جنيه",
+        growth: "80-100 يوم",
+        fertilizer: "سماد فوسفوري + بوتاسيوم"
+
+      },
+
+      {
+        id: 4,
+        name: "الخس",
+        img: "images/lettuce3.jpg",
+        season: "Spring",
+        seasonText: "مارس - مايو",
+        modalImg: "images/lettuce3.jpg",
+        method: "بذر مباشر في أحواض أو صواني، مع الحفاظ على رطوبة التربة",
+        cost: "8,000 - 12,000 جنيه",
+        growth: "45-60 يوم",
+        fertilizer: "سماد نيتروجيني خفيف"
+      },
+      {
+        id: 5,
+        name: "السبانخ",
+        img: "images/Spinach.jpg",
+        season: "Autumn",
+        seasonText: "اغسطس - نوفمبر",
+        modalImg: "images/Spinach.jpg",
+        method: "تزرع البذور في أحواض بعمق 1-2 سم…",
+        cost: "15,000 - 20,000 جنيه",
+        growth: "90 - 120 يوم",
+        fertilizer: "سماد NPK متوازن"
+      },
+      {
+        id: 6,
+        name: "البطيخ",
+        img: "images/watermelon.jpg",
+        season: "Summer",
+        seasonText: "يناير - مايو",
+        modalImg: "images/watermelon.jpg",
+        method: "زراعة البذور في جور على أبعاد 2×2 متر مع ري غزير",
+        cost: "10,000 - 15,000 جنيه",
+        growth: "90-120 يوم",
+        fertilizer: "سماد بوتاسي عالي"
+      },
+
+      {
+        id: 7,
+        name: "الذرة",
+        img: "images/corn2.jpg",
+        season: "Summer",
+        seasonText: "مايو - يونيو",
+        modalImg: "images/corn2.jpg",
+        method: "بذر مباشر في خطوط بمسافة 25 سم بين النباتات ",
+        cost: "7,000 - 10,000 جنيه",
+        growth: "100-120 يوم",
+        fertilizer: "سماد نيتروجيني + فوسفوري"
+      },
+      {
+        id: 8,
+        name: "الباذنجان",
+        img: "images/باذنجان.jpg",
+        season: "Autumn",
+        seasonText: "مارس - مايو",
+        modalImg: "images/باذنجان.jpg",
+        method: "زراعة في مشتل ثم نقل الشتلات على مسافة 50 سم",
+        cost: "16,000 - 22,000 جنيه",
+        growth: "80-100 يوم",
+        fertilizer: "سماد NPK متوازن"
+      },
+      {
+        id: 9,
+        name: "الكوسة",
+        img: "images/كوسة.jpg",
+        season: "Autumn",
+        seasonText: "مارس - مايو",
+        modalImg: "images/كوسة.jpg",
+        method: "بذر مباشر في جور على أبعاد 1×1 متر",
+        cost: "9,000 - 14,000 جنيه",
+        growth: "50-65 يوم",
+        fertilizer: "سماد عضوي متحلل"
+      },
+      {
+        id: 10,
+        name: "الجزر",
+        img: "images/carrot3.jpg",
+        season: "Autumn",
+        seasonText: "مارس - مايو",
+        modalImg: "images/carrot3.jpg",
+        method: "بذر مباشر في تربة رملية خفيفة على عمق 1 سم",
+        cost: "10,000 - 15,000 جنيه",
+        growth: "90-120 يوم",
+        fertilizer: "سماد بوتاسي + فوسفوري"
+      },
+      {
+        id: 11,
+        name: "البروكلي",
+        img: "images/broccoli.jpg",
+        season: "Autumn",
+        seasonText: "يولو - اكتوبر",
+        modalImg: "images/broccoli.jpg",
+        method: "زراعة شتلات على مسافة 40-50 سم في تربة جيدة الصرف",
+        cost: "20,000 - 28,000 جنيه",
+        growth: "70-100 يوم",
+        fertilizer: "سماد نيتروجيني + كالسيوم"
+      },
+      {
+        id: 12,
+        name: "القرنبيط",
+        img: "images/قرنبيط.jpg",
+        season: "Winter",
+        seasonText: "سبتمبر-نوفمبر",
+        modalImg: "images/tomato3.jpg",
+        method: "شتلات تزرع على أبعاد 50-60 سم مع ري منتظم",
+        cost: "18,000 - 25,000 جنيه",
+        growth: "80-110 يوم",
+        fertilizer: "سماد NPK + عناصر صغرى"
+      },
+      {
+        id: 13,
+        name: "البصل",
+        img: "images/onions.jpg",
+        season: "Autumn",
+        seasonText: "سبتمبر - اكتوبر",
+        modalImg: "images/onions.jpg",
+        method: "زراعة الأبصال الصغيرة على مسافة 10 سم في خطوط",
+        cost: "12,000 - 18,000 جنيه",
+        growth: "120-150 يوم",
+        fertilizer: "سماد بوتاسي + كبريت"
+      },
+      {
+        id: 14,
+        name: "الثوم",
+        img: "images/Garlic.jpg",
+        season: "Winter",
+        seasonText: "سبتمبر - نوفمبر",
+        modalImg: "images/Garlic.jpg",
+        method: "فصوص الثوم تزرع رأسياً على عمق 5 سم",
+        cost: "15,000 - 22,000 جنيه",
+        growth: "150-180 يوم",
+        fertilizer: "سماد عضوي + كبريت"
+      },
+    ];
+    function drawCards(plants) {
+      cardsContainer.innerHTML = "";
+
+      plants.forEach(item => {
+        cardsContainer.innerHTML += `
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card plantCard pb-4" data-id="${item.id}">
+      <img src="${item.img}" class="card-img-top h-50">
+      <div class="card-body text-end text-success mt-2">
+        <h5 class="card-title">${item.name}</h5>
+        <small class="text-success fs-5">${item.seasonText}</small>       
+        <a class="moreInfo btn d-block mt-3 w-50" 
+           data-id="${item.id}">
+            عرض التفاصيل
+        </a>
+      </div>
+    </div>
+  </div>
+`;
+      });
+    }
+    drawCards(plants);
+
+    // ///////////filter//////////////////////////////////////////
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+
+        // 1) نشيل active من كل الأزرار
+        filterBtns.forEach(b => b.classList.remove("active"));
+
+        // 2) نعمل active للزرار اللي اتداس عليه
+        btn.classList.add("active");
+
+        // 3) نجيب قيمة الفلتر من الزرار
+        const filterValue = btn.dataset.filter;
+
+        // 4) نفلتر
+        filterPlants(filterValue);
+      });
+    });
+    // ////////////////
+    // عند الفلترة
+    function filterPlants(season) {
+      if (season === "all") {
+        drawCards(plants);
+      } else {
+        const filtered = plants.filter(item => item.season === season);
+        drawCards(filtered);
+      }
+      attachModalEvents(); // مهم جدًا بعد كل رسم
+    }
+    // //////////////Modal////////////////////
+
+    function openModal(id) {
+      let plant = plants.find(p => p.id == id);
+      if (!plant) return;
+
+      modalTitle.textContent = plant.name;
+      modalImg.src = plant.modalImg || plant.img;
+      modalMethod.textContent = plant.method;
+      modalCost.textContent = plant.cost;
+      modalGrowth.textContent = plant.growth;
+      modalFertilizer.textContent = plant.fertilizer;
+      modalSeason.textContent = plant.seasonText;
+
+      const modal = new bootstrap.Modal(document.getElementById("myModal"));
+      modal.show();
+    }
+    // إعادة رسم الكروت + إضافة الأحداث
+    function attachModalEvents() {
+
+      // زر التفاصيل
+      document.querySelectorAll(".moreInfo").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          openModal(btn.closest(".plantCard").dataset.id);
+        });
+      });
+
+      // الضغط على الكارت كله
+      document.querySelectorAll(".plantCard").forEach(card => {
+        card.addEventListener("click", () => {
+          openModal(card.dataset.id);
+        });
+      });
+    }
+    attachModalEvents();
+  </script>
+</body>
+</html>

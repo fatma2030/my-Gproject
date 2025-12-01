@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صحة النبات</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/shopping.css">
+</head>
+
+<body>
+
+  <!-- الهيدر -->
+  <header class="navbar navbar-expand-sm bg-success navbar-dark text-light">
+    <div class="container-fluid">
+      <a class="navbar-logo d-flex align-items-between me-5" href="#">
+        <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+        <span class="nameLogo mt-2">نباتي</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-leaf fs-4"></i> تسجيل الدخول </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-upload fs-4"></i> تسجيل الأمراض</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="upload.html"><i class="fas fa-tint fs-4"></i>تحليل التربة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="crops.html"><i class="fas fa-seedling fs-4"></i>النباتات والفصول</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shopping.html"><i class="fas fa-shopping-cart fs-4"></i>المتجر</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-comment fs-4"></i>استشارة خبير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الأساسي للصفحة -->
+  <div class="container py-5 text-center">
+    <h3 class="title-txt text-center text-success mb-4">المتجر الزراعي</h3>
+    <h5 class="title-txt text-center text-success mb-5">تسوق أفضل الأسمدة والمبيدات والبذور والأدوات الزراعية</h5>
+
+    <!-- فلاتر المتجر -->
+    <div class="shopFilterGroup d-flex flex-wrap justify-content-center gap-3 mb-5">
+
+      <button class="shopFilterBtn btn btn-light text-success px-4 py-3 text-center fs-5 active" data-filter="all">
+        <i class="far fa-calendar ms-2"></i>
+        الكل
+      </button>
+
+      <button class="shopFilterBtn btn btn-light text-success px-4 py-3 text-center fs-5" data-filter="fert">
+        <i class="fas fa-seedling ms-2"></i>
+        أسمدة
+      </button>
+
+      <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="pest">
+        <i class="fas fa-bug ms-2"></i>
+        مبيدات
+      </button>
+
+      <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="tools">
+        <i class="fas fa-tools ms-2"></i>
+        أدوات
+      </button>
+
+      <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="seeds">
+        <i class="fas fa-seedling"></i> بذور
+      </button>
+
+      <button class="shopFilterBtn btn btn-light text-success px-5 py-3 text-center fs-5" data-filter="water">
+        <i class="fas fa-tint ms-2"></i>
+        أنظمة ري
+      </button>
+
+    </div>
+
+    <!-- كروت المنتجات -->
+    <div id="shopCardsContainer" class="row g-4"></div>
+
+    <!-- ============ SHOP PAYMENT MODAL ============ -->
+    <div class="modal fade" id="shopPaymentModal">
+      <div class="modal-dialog modal-dialog-centered" style="max-width:500px;">
+        <div class="modal-content" style="border-radius:20px; overflow:hidden;">
+
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+            <h4 class="modal-title text-success">اختر طريقة الدفع</h4>
+          </div>
+
+          <div class="modal-body text-end">
+
+            <div id="shopPayBox" class="p-3 mb-3 rounded text-success fw-bold" style="background:#e3f8e3;">
+              <span id="shopPayName">اسم المنتج</span><br>
+              <span id="shopPayPrice">150 جنيه</span>
+            </div>
+
+            <h6 class="text-success mb-3">اختر وسيلة الدفع</h6>
+
+            <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
+              data-method="فودافون كاش">
+              <span class="text-success">الدفع عبر المحافظ الإلكترونية</span>
+              <i class="fas fa-wallet text-danger fs-4"></i>
+            </div>
+
+            <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
+              data-method="تحويل بنكي">
+              <span class="text-success">الدفع بواسطة التحويل</span>
+              <i class="fas fa-university text-primary fs-4"></i>
+            </div>
+
+            <div class="shopPayOption p-3 mb-3 rounded d-flex justify-content-between align-items-center"
+              data-method="InstaPay">
+              <span class="text-success">الدفع عبر إنستا باي</span>
+              <i class="fas fa-bolt text-purple fs-4"></i>
+            </div>
+
+            <button id="shopConfirmPay" class="btn btn-success w-100 py-2 fs-5 mt-3">
+              إتمام الدفع
+            </button>
+          </div> <!-- modal-body -->
+        </div> <!-- modal-content -->
+      </div> <!-- modal-dialog -->
+    </div> <!-- modal fade -->
+  </div> <!-- contianer -->
+  <!-- ///////////////////////// -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-end">
+          <p class="navbar-logo d-flex align-items-between me-5">
+            <i class="fas fa-leaf bg-white text-success p-3 rounded-circle border border-success me-xxl-5 ms-3"></i>
+            <span class="nameLogo mt-2">نباتي</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-white">تواصل مع الدعم</h5>
+          <ul class="list-unstyled text-white">
+            <li><i class="fas fa-phone-alt"></i> هاتف: 01234567890</li>
+            <li><i class="fas fa-envelope"></i> البريد الإلكتروني: support@planthealth.com</li>
+            <li><i class="fab fa-whatsapp"></i> واتساب: 01234567890</li>
+          </ul>
+        </div>
+        <hr class="footer-line text-center">
+        <h5 class="text-white text-center">صحة النبات جميع الحقوق محفوظة 2025<span>&copy</span>.</h5>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    const shopCardsContainer = document.getElementById("shopCardsContainer");
+    const shopFilterBtns = document.querySelectorAll(".shopFilterBtn");
+
+    const shopModal = new bootstrap.Modal(document.getElementById("shopPaymentModal"));
+
+    // عناصر داخل المودال
+    const shopPayName = document.getElementById("shopPayName");
+    const shopPayPrice = document.getElementById("shopPayPrice");
+
+    const shopPayOptions = document.querySelectorAll(".shopPayOption");
+    const shopConfirmPay = document.getElementById("shopConfirmPay");
+
+    let selectedMethod = "";
+    let currentProduct = null;
+    // بيانات المنتجات
+    // ==============================================
+    const shopProducts = [
+      {
+        id: 1,
+        name: "سماد عضوي طبيعي",
+        img: "images/Organic.jpg",
+        type: "fert",
+        price: "150 جنيه",
+        description: "سماد عضوي غني بالمواد الغذائية مناسب لجميع النباتات.",
+        details: "يحسّن بنية التربة – يزيد الاحتفاظ بالماء – آمن تماماً للنباتات المنزلية والمحاصيل."
+      },
+      {
+        id: 2,
+        name: "مبيد حشري قوي",
+        img: "images/مبيد حشاائش.jpg",
+        type: "pest",
+        price: "90 جنيه",
+        description: "مبيد فعال للقضاء على الحشرات الضارة.",
+        details: "يعمل ضد الذبابة البيضاء – المن – الحشرات القشرية دون الإضرار بالأوراق."
+      },
+      {
+        id: 3,
+        name: "أداة حرث زراعية",
+        img: "images/الجرار.jpg",
+        type: "tools",
+        price: "350 جنيه",
+        description: "أداة قوية للحرث وتجهيز الأرض.",
+        details: "مصنوعة من الحديد المقوى – مناسبة للأراضي الصلبة – سهلة الاستخدام."
+      },
+      {
+        id: 4,
+        name: "مبيد حشائش فعال",
+        img: "images/Organic.jpg",
+        type: "pest",
+        price: "95 جنيه",
+        description: "مبيد متخصص لإزالة الحشائش من التربة.",
+        details: "يقضي على الحشائش الجذرية – يستمر تأثيره لمدة 45 يوم."
+      },
+      {
+        id: 5,
+        name: "بذور طماطم عالية الجودة",
+        img: "images/tomato3.jpg",
+        type: "seeds",
+        price: "45 جنيه",
+        description: "بذور طماطم مميزة تعطي إنتاجًا وفيرًا.",
+        details: "إنبات سريع – إنتاج قوي – مقاومة للأمراض الشائعة."
+      },
+      {
+        id: 6,
+        name: "أداة زراعة متعددة الاستخدام",
+        img: "images/فاس.jpg",
+        type: "tools",
+        price: "120 جنيه",
+        description: "أداة زراعية عالية الجودة.",
+        details: "تستخدم للحفر – خلط التربة – تنظيف سطح الأرض."
+      },
+      {
+        id: 7,
+        name: "شتلات رمان",
+        img: "images/Pomegranate.jpg",
+        type: "seeds",
+        price: "70 جنيه",
+        description: "شتلات رمان مناسبة للحدائق والمزارع.",
+        details: "عمر 6 أشهر – مقاومة للجفاف نسبياً – إنتاج بعد 2–3 سنوات."
+      },
+      {
+        id: 8,
+        name: "بذور قمح ممتازة",
+        img: "images/قمح.jpg",
+        type: "seeds",
+        price: "80 جنيه",
+        description: "بذور قمح نقية عالية الإنتاج.",
+        details: "معدل إنبات عالي – مقاومة للأمراض – إنتاج وفير."
+      },
+      {
+        id: 9,
+        name: "مجرفة يد صغيرة",
+        img: "images/اداة للزراعة.jpeg",
+        type: "tools",
+        price: "65 جنيه",
+        description: "مجرفة خفيفة لخلط التربة.",
+        details: "مناسبة للأحواض – قوية – مقبض مريح."
+      },
+      {
+        id: 10,
+        name: "رشاش ري زراعي",
+        img: "images/sprinkler.jpg",
+        type: "water",
+        price: "600 جنيه",
+        description: "رشاش يوزع المياه بالتساوي.",
+        details: "مناسب للمزارع – تغطية كبيرة – يتحمل الضغط العالي."
+      },
+      {
+        id: 11,
+        name: "مبيد نيماتودا قوي",
+        img: "images/مبيد نيماتودا.jpg",
+        type: "pest",
+        price: "120 جنيه",
+        description: "مبيد متخصص للقضاء على النيماتودا.",
+        details: "يحمي الجذور – يحسن النمو – مناسب للخضروات والأشجار."
+      },
+      {
+        id: 12,
+        name: "سماد فوسفات عالي الجودة",
+        img: "images/Phosphate (2).jpg",
+        type: "fert",
+        price: "160 جنيه",
+        description: "يقوي الجذور ويزيد الإزهار.",
+        details: "يساعد على امتصاص العناصر – مناسب لجميع المحاصيل."
+      }
+    ];
+    // ////////////drawing cards/////////////////
+    function drawShopCards(list) {
+      shopCardsContainer.innerHTML = "";
+
+      list.forEach(p => {
+        shopCardsContainer.innerHTML += `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card shopCard pb-4">
+
+          <img src="${p.img}" class="card-img-top h-50" alt="product">
+
+          <div class="card-body text-end text-success mt-2">
+            <h5 class="card-title">${p.name}</h5>
+            <small class="text-success fs-5 d-block mb-2">${p.price}</small>
+
+            <button class="shopDetailsBtn btn btn-bg-success w-50 mt-2"
+                    data-id="${p.id}">
+              شراء
+            </button>
+          </div>
+
+        </div>
+      </div>
+    `;
+      });
+
+      attachShopEvents();
+    }
+    drawShopCards(shopProducts);
+    //////////filter//////////////
+    shopFilterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+
+        shopFilterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filterVal = btn.dataset.filter;
+
+        if (filterVal === "all") {
+          drawShopCards(shopProducts);
+        } else {
+          drawShopCards(shopProducts.filter(p => p.type === filterVal));
+        }
+      });
+    });
+    // //onClick on button
+    function attachShopEvents() {
+      document.querySelectorAll(".shopDetailsBtn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.id;
+          const product = shopProducts.find(p => p.id == id);
+
+          currentProduct = product;
+
+          shopPayName.textContent = product.name;
+          shopPayPrice.textContent = product.price;
+
+          shopPayOptions.forEach(o => o.classList.remove("selected"));
+          selectedMethod = "";
+
+          shopModal.show();
+        });
+      });
+    }
+
+    // اختيار وسيلة الدفع
+    shopPayOptions.forEach(opt => {
+      opt.addEventListener("click", () => {
+
+        // إزالة Active من الكل
+        shopPayOptions.forEach(o => o.classList.remove("active"));
+
+        // إضافة Active للعنصر المختار
+        opt.classList.add("active");
+
+        selectedMethod = opt.dataset.method;
+      });
+    });
+
+
+    // ==== تأكيد الدفع ====
+    document.getElementById("shopConfirmPay").addEventListener("click", () => {
+
+      //  لو مفيش وسيلة دفع → اظهري رسالة خطأ
+      if (!selectedMethod) {
+        alert("من فضلك اختاري وسيلة الدفع أولاً");
+        return;
+      }
+
+      //  لو وسيلة الدفع موجودة
+      alert("تم الطلب بنجاح! سيتم الدفع عبر " + selectedMethod);
+
+      //  يقفل المودال
+      shopModal.hide();
+    });
+
+
+
+  </script>
+</body>
+
+</html>
