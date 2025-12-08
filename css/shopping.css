@@ -12,8 +12,6 @@ html, body {
       flex-direction: column;
     }
  
-
-
     /* ====== تنسيق الهيدر ====== */
     .navbar {
       background-color: #206d24 !important; /* الأخضر الزيتي */
@@ -72,12 +70,6 @@ html, body {
   color: #fff !important;
 }
 /*  ////page2*/
-
-
-
-
-
-
 
 /* فلتر المتجر */
 .shopFilterGroup .shopFilterBtn {
